@@ -33,4 +33,4 @@ jobs:
         CBT_USERNAME: ${{ secrets.CBT_USERNAME }}
         CBT_AUTHKEY: ${{ secrets.CBT_AUTHKEY }}
       run: |
-        python test.py
+        seleium_python test.py
