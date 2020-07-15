@@ -9,13 +9,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 class LoginForm(unittest.TestCase):
     def setUp(self):
-    
-    def setUp(self):
-        """
-        LoginForm
-        Put your username and authkey below
-        You can find your authkey at crossbrowsertesting.com/account
-        """
+
+        # Put your username and authkey below
+        # You can find your authkey at crossbrowsertesting.com/account
         self.username = os.environ.get('CBT_USERNAME')
         self.authkey  = os.environ.get('CBT_AUTHKEY')
 
@@ -23,7 +19,7 @@ class LoginForm(unittest.TestCase):
         self.api_session.auth = (self.username,self.authkey)
 
         self.test_result = None
-        
+
         caps = {}
 
         caps['name'] = 'Github Actions Example'
@@ -59,16 +55,14 @@ class LoginForm(unittest.TestCase):
             self.assertEqual("Welcome tester@crossbrowsertesting.com", welcomeText)
 
             print("Taking snapshot")
-            snapshot_hash = self.api_session.post(
-                'https://crossbrowsertesting.com/api/v3/selenium/' + self.driver.session_id + '/snapshots').json()['hash']
+            snapshot_hash = self.api_session.post('https://crossbrowsertesting.com/api/v3/selenium/' + self.driver.session_id + '/snapshots').json()['hash']
 
             self.test_result = 'pass'
 
         except AssertionError as e:
 
             # log the error message, and set the score to "during tearDown()".
-            self.api_session.put(
-                'https://crossbrowsertesting.com/api/v3/selenium/' + self.driver.session_id + '/snapshots/' + snapshot_hash,
+            self.api_session.put('https://crossbrowsertesting.com/api/v3/selenium/' + self.driver.session_id + '/snapshots/' + snapshot_hash,
                 data={'description':"AssertionError: " + str(e)})
             self.test_result = 'fail'
             raise
@@ -86,3 +80,4 @@ class LoginForm(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+    
