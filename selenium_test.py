@@ -9,7 +9,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 class LoginForm(unittest.TestCase):
     def setUp(self):
 
-        # Put your username and authkey below
+        # Put your username and authkey below 
         # You can find your authkey at crossbrowsertesting.com/account
         self.username = os.environ.get('CBT_USERNAME')
         self.authkey  = os.environ.get('CBT_AUTHKEY')
