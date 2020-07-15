@@ -43,7 +43,7 @@ class LoginForm(unittest.TestCase):
             self.driver.maximize_window()
             self.driver.find_element_by_name('username').send_keys('tester@crossbrowsertesting.com')
             self.driver.find_element_by_name('password').send_keys('test123')
-            self.driver.find_element_by_css_selector('body &gt; div &gt; div &gt; div &gt; div &gt; form &gt; div.form-actions &gt; button').click()
+            self.driver.find_element_by_xpath('//button[contains(text(),\"Login\")]').click()
 
             elem = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, '//*[@id=\"logged-in-message\"]/h2'))
