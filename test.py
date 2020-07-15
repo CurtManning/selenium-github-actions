@@ -73,5 +73,6 @@ class LoginForm(unittest.TestCase):
             self.api_session.put('https://crossbrowsertesting.com/api/v3/selenium/' + self.driver.session_id,
                 data={'action':'set_score', 'score':self.test_result})
 
+
 if __name__ == '__main__':
     unittest.main()
