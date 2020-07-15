@@ -130,7 +130,7 @@ if __name__ == '__main__':
 selenium==3.141.0</code></pre>
 <h2>Setting Your Username and Authkey For Your Workflow</h2>
 <div class="blue-alert">You’ll need to use your Username and Authkey to run your tests on CrossBrowserTesting. To get yours, sign up for a <a href="https://crossbrowsertesting.com/freetrial"><b>free trial</b></a> or purchase a <a href="https://crossbrowsertesting.com/pricing"><b>plan</b></a>.</div>
-<p>Your username and authkey will be used in your workflow as environment variables.</p>
+<p>Your username and authkey will be used in your workflow as environment variables. </p>
 <p>1. Settings</p>
 <p><img src="http://help.crossbrowsertesting.com/wp-content/uploads/2019/11/github_actions_settings.png" /></p>
 <p>2. Add the username and authkey as Secrets</p>
