@@ -39,7 +39,7 @@ class LoginForm(unittest.TestCase):
     def test_CBT(self):
 
         try:
-            baseUrl = "https://www.ltgc.com/rate-quote/external/residential'"
+            baseUrl = "https://www.ltgc.com/rate-quote/external/residential"
             self.driver.maximize_window()
             # Refreshing the browser clears the a popup that only appears in Chrome
             self.driver.get(baseUrl)
