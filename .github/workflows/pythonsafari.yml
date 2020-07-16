@@ -1,4 +1,4 @@
-name: Python package
+name: Chrome Interactions
 
 on: [push]
 
@@ -9,7 +9,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [2.7, 3.5, 3.7]
+        python-version: [3.8, 3.5, 3.7]
 
     steps:
       - uses: actions/checkout@v1
@@ -34,4 +34,4 @@ jobs:
           CBT_USERNAME: ${{ secrets.CBT_USERNAME }}
           CBT_AUTHKEY: ${{ secrets.CBT_AUTHKEY }}
         run: |
-          python test.py
+          python test_browser_safari.py

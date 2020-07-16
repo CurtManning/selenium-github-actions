@@ -20,9 +20,9 @@ class LoginForm(unittest.TestCase):
 
         caps = {}
 
-        caps['name'] = 'Chrome Interactions'
-        caps['browserName'] = 'Chrome'
-        caps['platform'] = 'Windows 10'
+        caps['name'] = 'Safari Interactions'
+        caps['browserName'] = 'safari'
+        caps['platform'] = 'macOS'
         caps['screenResolution'] = '1366x768'
         caps['username'] = self.username
         caps['password'] = self.authkey
@@ -56,7 +56,7 @@ class LoginForm(unittest.TestCase):
             self.driver.get(self.driver.current_url)
             print("PASS:  Browser Refreshed 2nd time")
             # Open another Url
-            self.driver.get("https://webdevel01.ltgc.com/rates/calc")
+            self.driver.get("https://www.ltgc.com/rates/calc")
             currentUrl = self.driver.current_url
             print("PASS:  Current Url of the web page is: " + currentUrl)
             # Browser Back
