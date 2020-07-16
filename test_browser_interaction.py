@@ -20,7 +20,7 @@ class LoginForm(unittest.TestCase):
 
         caps = {}
 
-        caps['name'] = 'Github Actions Example'
+        caps['name'] = 'Chrome Interactions'
         caps['browserName'] = 'Chrome'
         caps['platform'] = 'Windows 10'
         caps['screenResolution'] = '1366x768'
@@ -39,7 +39,7 @@ class LoginForm(unittest.TestCase):
     def test_CBT(self):
 
         try:
-            baseUrl = "https://webdevel01.ltgc.com/rate-quote/external/residential'"
+            baseUrl = "https://www.ltgc.com/rate-quote/external/residential'"
             self.driver.maximize_window()
             # Refreshing the browser clears the a popup that only appears in Chrome
             self.driver.get(baseUrl)

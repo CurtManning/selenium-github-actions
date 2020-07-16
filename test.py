@@ -20,8 +20,8 @@ class LoginForm(unittest.TestCase):
 
         caps = {}
 
-        caps['name'] = 'Github Actions Example'
-        caps['browserName'] = 'Chrome'
+        caps['name'] = 'Github Actions Firefox'
+        caps['browserName'] = 'Firefox'
         caps['platform'] = 'Windows 10'
         caps['screenResolution'] = '1366x768'
         caps['username'] = self.username
