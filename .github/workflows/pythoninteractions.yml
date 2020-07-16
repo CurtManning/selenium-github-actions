@@ -34,4 +34,4 @@ jobs:
           CBT_USERNAME: ${{ secrets.CBT_USERNAME }}
           CBT_AUTHKEY: ${{ secrets.CBT_AUTHKEY }}
         run: |
-          python test_browser_interactions.py
+          python test_browser_interaction.py
