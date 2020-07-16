@@ -39,45 +39,41 @@ class LoginForm(unittest.TestCase):
     def test_CBT(self):
 
         try:
-            self.driver.get('https://webdevel01.ltgc.com/rate-quote/external/residential')
+            baseUrl = "https://webdevel01.ltgc.com/rate-quote/external/residential'"
             self.driver.maximize_window()
-# Refreshing the browser clears the a popup that only appears in Chrome
-        driver.get(baseUrl)
+            # Refreshing the browser clears the a popup that only appears in Chrome
+            self.driver.get(baseUrl)
 
-        # Get Title
-        title = driver.title
-        print("PASS:  Title of the web page is: " + title)
-        # Get Current Url
-        currentUrl = driver.current_url
-        print("PASS:  Current Url of the web page is: " + currentUrl)
-        driver.refresh()        # Browser Refresh
+            # Get Title
+            title = self.driver.title
+            print("PASS:  Title of the web page is: " + title)
+            # Get Current Url
+            currentUrl = self.driver.current_url
+            print("PASS:  Current Url of the web page is: " + currentUrl)
+            self.driver.refresh()        # Browser Refresh
 
-        print("PASS:  Browser Refreshed 1st time")
-        driver.get(driver.current_url)
-        print("PASS:  Browser Refreshed 2nd time")
-        # Open another Url
-        driver.get("https://www.ltgc.com/rates/calc")
-        currentUrl = driver.current_url
-        print("PASS:  Current Url of the web page is: " + currentUrl)
-        # Browser Back
-        driver.back()
-        print("PASS:  Go one step back in browser history")
-        currentUrl = driver.current_url
-        print("PASS:  Current Url of the web page is: " + currentUrl)
-        # Browser Forward
-        driver.forward()
-        print("PASS:  Go one step forward in browser history")
-        currentUrl = driver.current_url
-        print("PASS:  Current Url of the web page is: " + currentUrl)
-        # Get Page Source
-        pageSource = driver.page_source
-        print(pageSource)
-        # Browser Close / Quit
-        # driver.close()
-        driver.quit()
-
-            welcomeText = elem.text
-            self.assertEqual("Welcome tester@crossbrowsertesting.com", welcomeText)
+            print("PASS:  Browser Refreshed 1st time")
+            self.driver.get(self.driver.current_url)
+            print("PASS:  Browser Refreshed 2nd time")
+            # Open another Url
+            self.driver.get("https://www.ltgc.com/rates/calc")
+            currentUrl = self.driver.current_url
+            print("PASS:  Current Url of the web page is: " + currentUrl)
+            # Browser Back
+            self.driver.back()
+            print("PASS:  Go one step back in browser history")
+            currentUrl = self.driver.current_url
+            print("PASS:  Current Url of the web page is: " + currentUrl)
+            # Browser Forward
+            self.driver.forward()
+            print("PASS:  Go one step forward in browser history")
+            currentUrl = self.driver.current_url
+            print("PASS:  Current Url of the web page is: " + currentUrl)
+            # Get Page Source
+            pageSource = self.driver.page_source
+            print(pageSource)
+            # Browser Close / Quit
+            # driver.close()
 
             print("Taking snapshot")
             snapshot_hash = self.api_session.post('https://crossbrowsertesting.com/api/v3/selenium/' + self.driver.session_id + '/snapshots').json()['hash']
